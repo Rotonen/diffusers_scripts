@@ -1,0 +1,27 @@
+name: Lint Markdown
+
+on: push
+
+jobs:
+  markdown-lint:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+
+      - name: Setup Python
+        uses: actions/setup-python@f677139bbe7f9c59b41e40162b753c062f5d49a3 # v5.2.0
+        with:
+          python-version: 3.11
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@6dfebec6ddbcd197e02256fbdf54deb334fb7f06 # v2.1.2
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: uv sync
+        run: uv sync
+
+      - name: markdownlint
+        run: uv run pymarkdown scan .

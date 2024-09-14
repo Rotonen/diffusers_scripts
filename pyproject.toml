@@ -1,0 +1,75 @@
+[project]
+name = "diffusers-scripts"
+version = "0.1.0"
+description = "Collection of various local use convenience scripts for playing around with diffusers."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.uv]
+dev-dependencies = [
+    "pymarkdownlnt>=0.9.23",
+    "ruff>=0.6.5",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "F",    # pyflakes
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "YTT",  # flake8-2020
+    "BLE",  # flake8-blind-except
+    "FBT",  # flake8-boolean-trap
+    "B",    # flake8-bugbear
+    "A",    # flake8-builtins
+    "COM",  # flake8-commas
+    "C4",   # flake8-comprehensions
+    "DTZ",  # flake8-datetimez
+    "T10",  # flake8-debugger
+    "EM",   # flake8-errmsg
+    "EXE",  # flake8-executable
+    "FA",   # flake8-future-annotations
+    "ISC",  # flake8-implicit-str-concat
+    "ICN",  # flake8-import-conventions
+    "LOG",  # flake8-logging
+    "G",    # flake8-logging-format
+    "INP",  # flake8-no-pep420
+    "PIE",  # flake8-pie
+    "T20",  # flake8-print
+    "PYI",  # flake8-pyi
+    "Q",    # flake8-quotes
+    "RSE",  # flake8-raise
+    "RET",  # flake8-return
+    "SLF",  # flake8-self
+    "SLOT", # flake8-slot
+    "SIM",  # flake8-simplify
+    "TID",  # flake8-tidy-imports
+    "ARG",  # flake8-unused-arguments
+    "PTH",  # flake8-use-pathlib
+    "TD",   # flake8-todos
+    "FIX",  # flake8-fixme
+    "ERA",  # eradicate
+    "PL",   # pylint
+    "TRY",  # tryceratops
+    "FLY",  # flynt
+    "PERF", # perflint
+    "FURB", # refurb
+    "RUF",  # ruff-specific rules
+]
+
+ignore = [
+    "COM812", # conflicts with ruff format
+    "ISC001", # conflicts with ruff format
+]
+
+[tool.pymarkdown]
+plugins.md013.line_length = 120
+plugins.md013.heading_line_length = 120
+plugins.md013.code_block_line_length = 120
