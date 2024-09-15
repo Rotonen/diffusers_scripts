@@ -63,3 +63,10 @@ The memory use is not horrible and it's not too slow. The output is not too bad,
 * `uv run --locked sd-30.py --help`
 
 Medium quality and speed.
+
+### Flux.1 Schnell 16bit
+
+* `uv run --locked flux-schnell-16.py`
+* `uv run --locked flux-schnell-16.py --help`
+
+Good quality and very fast. Somewhat memory hungry.
