@@ -25,9 +25,6 @@ def main(model, prompt, resolution, inference_steps, images_per_batch):
 
     pipeline = AutoPipelineForText2Image.from_pretrained(model, torch_dtype=datatype)
 
-    if backend == "cuda":
-        pipeline.enable_model_cpu_offload()
-
     pipeline.to(backend)
 
     images = pipeline(
