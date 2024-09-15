@@ -13,12 +13,13 @@ def main(model, prompt, resolution, inference_steps, images_per_batch):
 
     prompt = [prompt] * images_per_batch
 
-    backend = "cuda"
     datatype = bfloat16
 
     pipeline = AutoPipelineForText2Image.from_pretrained(model, torch_dtype=datatype)
-
-    pipeline.to(backend)
+    pipeline.enable_sequential_cpu_offload()
+    pipeline.vae.enable_slicing()
+    pipeline.vae.enable_tiling()
+    pipeline.to(datatype)
 
     images = pipeline(
         prompt=prompt,

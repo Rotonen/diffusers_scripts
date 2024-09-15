@@ -43,14 +43,14 @@ Refer to `pyproject.toml` for details on which linters are enabled and how they 
 
 Every script provided has default values for every parameter, so you can try them out without having to dive in deeper.
 
-### Stable Diffusion Turbo
+### Stable Diffusion Turbo 16bit
 
 * `uv run --locked sd-turbo.py`
 * `uv run --locked sd-turbo.py --help`
 
 A fast model, which produces something at a single step. Not terrible, not great.
 
-### Stable Diffusion 2.1
+### Stable Diffusion 2.1 16bit
 
 * `uv run --locked sd-21.py`
 * `uv run --locked sd-21.py --help`

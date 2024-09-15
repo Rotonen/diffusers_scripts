@@ -25,11 +25,13 @@ def main(model, prompt, resolution, inference_steps, images_per_batch):
     )
     negative_prompt = [", ".join(negative_attributes)] * images_per_batch
 
-    backend = "cuda"
     datatype = bfloat16
 
     pipeline = StableDiffusionPipeline.from_pretrained(model, torch_dtype=datatype)
-    pipeline.to(backend)
+    pipeline.enable_sequential_cpu_offload()
+    pipeline.vae.enable_slicing()
+    pipeline.vae.enable_tiling()
+    pipeline.to(datatype)
 
     images = pipeline(
         prompt=prompt,
