@@ -9,9 +9,11 @@ merchant is able to see the tail lights."
 
 ## Development Environment
 
-I'm working on a Debian Bookworm box.
+I'm working on a Debian Bookworm box with an Nvidia A4000.
 
 Some of this stuff also works on macOS. Please refer to the disclaimer above.
+
+If you have a functional Python 3.11 installation, `uv sync` and `uv run` should have you covered /wrt local setup.
 
 ### Editorconfig
 
@@ -35,6 +37,17 @@ Refer to `pyproject.toml` for details on which linters are enabled and how they 
 
 ## CI
 
-* Formatting: ruff
+* Python formatting: ruff
 * Python linting: ruff
 * MarkDown linting: pymarkdownlnt
+
+## Scripts Provided
+
+Every script provided has default values for every parameter, so you can try them out without having to dive in deeper.
+
+### Stable Diffusion Turbo
+
+`uv run sd-turbo.py`
+`uv run sd-turbo.py --help`
+
+A fast model, which produces something at a single step. Not terrible, not great.
