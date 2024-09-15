@@ -4,7 +4,13 @@ version = "0.1.0"
 description = "Collection of various local use convenience scripts for playing around with diffusers."
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "accelerate>=0.34.2",
+    "diffusers>=0.30.2",
+    "python-slugify>=8.0.4",
+    "torch>=2.4.1",
+    "transformers>=4.44.2",
+]
 
 [tool.uv]
 dev-dependencies = [
