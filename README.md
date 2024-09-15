@@ -9,9 +9,7 @@ merchant is able to see the tail lights."
 
 ## Development Environment
 
-I'm working on a Debian Bookworm box with an Nvidia A4000.
-
-Some of this stuff also works on macOS. Please refer to the disclaimer above.
+I'm working on a Debian Bookworm box with an Nvidia RTX A4000.
 
 If you have a functional Python 3.11 installation, `uv run --locked` should have you covered /wrt local setup.
 
