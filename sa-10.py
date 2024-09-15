@@ -11,15 +11,15 @@ from soundfile import write as write_soundfile
 from torch import bfloat16
 
 
-def main(model, prompt, length, inference_steps, images_per_batch):
-    prompt = [prompt] * images_per_batch
+def main(model, prompt, length, inference_steps, samples_per_batch):
+    prompt = [prompt] * samples_per_batch
 
     negative_attributes = (
         "low quality",
         "low fidelity",
         "annoying",
     )
-    negative_prompt = [", ".join(negative_attributes)] * images_per_batch
+    negative_prompt = [", ".join(negative_attributes)] * samples_per_batch
 
     datatype = bfloat16
 
@@ -71,8 +71,8 @@ if __name__ == "__main__":
     parser.add_argument("--prompt", default="hammered dulcimer solo", required=False)
     parser.add_argument("--length", default=30, type=int, required=False)
     parser.add_argument("--inference-steps", default=256, type=int, required=False)
-    parser.add_argument("--images-per-batch", default=1, type=int, required=False)
+    parser.add_argument("--samples-per-batch", default=1, type=int, required=False)
 
     arguments = parser.parse_args()
 
-    main(arguments.model, arguments.prompt, arguments.length, arguments.inference_steps, arguments.images_per_batch)
+    main(arguments.model, arguments.prompt, arguments.length, arguments.inference_steps, arguments.samples_per_batch)
