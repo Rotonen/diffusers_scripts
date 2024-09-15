@@ -70,3 +70,10 @@ Medium quality and speed.
 * `uv run --locked flux-schnell-16.py --help`
 
 Good quality and very fast. Somewhat memory hungry.
+
+### Flux.1 Schnell 8bit
+
+* `uv run --locked flux-schnell-8.py`
+* `uv run --locked flux-schnell-8.py --help`
+
+Good quality and very fast. Somewhat less memory hungry.
