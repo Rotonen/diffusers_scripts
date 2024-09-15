@@ -84,3 +84,10 @@ Good quality and very fast. Somewhat less memory hungry.
 * `uv run --locked flux-dev-16.py --help`
 
 Good quality and somewhat slow. Memory hungry.
+
+### Flux.1 Dev 8bit
+
+* `uv run --locked flux-dev-8.py`
+* `uv run --locked flux-dev-8.py --help`
+
+Good quality and somewhat less slow. Somewhat less memory hungry.
