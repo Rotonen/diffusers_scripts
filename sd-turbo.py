@@ -52,7 +52,7 @@ def main(model, prompt, resolution, inference_steps, images_per_batch):
 if __name__ == "__main__":
     parser = ArgumentParser()
 
-    parser.add_argument("--model", default="stabilityai/sd-turbo", required=False)
+    parser.add_argument("--model", default="stabilityai/sdxl-turbo", required=False)
     parser.add_argument("--prompt", default="sunset in a remote valley in berner oberland", required=False)
     parser.add_argument("--width", default=1024, type=int, required=False)
     parser.add_argument("--height", default=1024, type=int, required=False)
