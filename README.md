@@ -47,7 +47,14 @@ Every script provided has default values for every parameter, so you can try the
 
 ### Stable Diffusion Turbo
 
-`uv run sd-turbo.py`
-`uv run sd-turbo.py --help`
+* `uv run sd-turbo.py`
+* `uv run sd-turbo.py --help`
 
 A fast model, which produces something at a single step. Not terrible, not great.
+
+### Stable Diffusion 2.1
+
+* `uv run sd-21.py`
+* `uv run sd-21.py --help`
+
+The memory use is not horrible and it's not too slow. The output is not too bad, but not great either.
