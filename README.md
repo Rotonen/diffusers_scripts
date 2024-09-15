@@ -13,7 +13,7 @@ I'm working on a Debian Bookworm box with an Nvidia A4000.
 
 Some of this stuff also works on macOS. Please refer to the disclaimer above.
 
-If you have a functional Python 3.11 installation, `uv sync` and `uv run` should have you covered /wrt local setup.
+If you have a functional Python 3.11 installation, `uv sync --frozen` and `uv run` should have you covered /wrt local setup.
 
 ### Editorconfig
 
