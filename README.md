@@ -91,3 +91,10 @@ Good quality and somewhat slow. Memory hungry.
 * `uv run --locked flux-dev-8.py --help`
 
 Good quality and somewhat less slow. Somewhat less memory hungry.
+
+### Stable Audio 1.0
+
+* `uv run --locked sa-10.py`
+* `uv run --locked sa-10.py --help`
+
+Very mixed results. Not too slow. Not too memory hungry.
