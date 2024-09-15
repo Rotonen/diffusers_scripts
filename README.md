@@ -77,3 +77,10 @@ Good quality and very fast. Somewhat memory hungry.
 * `uv run --locked flux-schnell-8.py --help`
 
 Good quality and very fast. Somewhat less memory hungry.
+
+### Flux.1 Dev 16bit
+
+* `uv run --locked flux-dev-16.py`
+* `uv run --locked flux-dev-16.py --help`
+
+Good quality and somewhat slow. Memory hungry.
