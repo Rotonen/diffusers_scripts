@@ -5,7 +5,8 @@ from time import time
 
 from diffusers import AutoPipelineForText2Image
 from slugify import slugify
-from torch import bfloat16
+from torch import float16, bfloat16, cuda
+from torch.backends import mps
 
 
 def main(model, prompt, resolution, inference_steps, images_per_batch):
@@ -13,8 +14,21 @@ def main(model, prompt, resolution, inference_steps, images_per_batch):
 
     prompt = [prompt] * images_per_batch
 
-    pipeline = AutoPipelineForText2Image.from_pretrained(model, torch_dtype=bfloat16)
-    pipeline.enable_model_cpu_offload()
+    if cuda.is_available():
+        backend = "cuda"
+        datatype = bfloat16
+    elif mps.is_available():
+        backend = "mps"
+        datatype = float16
+    else:
+        backend = "cpu"
+
+    pipeline = AutoPipelineForText2Image.from_pretrained(model, torch_dtype=datatype)
+
+    if backend == "cuda":
+        pipeline.enable_model_cpu_offload()
+
+    pipeline.to(backend)
 
     images = pipeline(
         prompt=prompt,

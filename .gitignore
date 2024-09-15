@@ -163,3 +163,6 @@ cython_debug/
 
 # Outputs directory
 /outputs
+
+# macOS thumbnails
+.DS_Store
