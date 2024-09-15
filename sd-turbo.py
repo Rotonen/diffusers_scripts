@@ -5,7 +5,7 @@ from time import time
 
 from diffusers import AutoPipelineForText2Image
 from slugify import slugify
-from torch import float16, bfloat16, cuda
+from torch import bfloat16, cuda, float16
 from torch.backends import mps
 
 
