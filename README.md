@@ -13,7 +13,7 @@ I'm working on a Debian Bookworm box with an Nvidia A4000.
 
 Some of this stuff also works on macOS. Please refer to the disclaimer above.
 
-If you have a functional Python 3.11 installation, `uv sync --frozen` and `uv run` should have you covered /wrt local setup.
+If you have a functional Python 3.11 installation, `uv run --locked` should have you covered /wrt local setup.
 
 ### Editorconfig
 
@@ -47,14 +47,14 @@ Every script provided has default values for every parameter, so you can try the
 
 ### Stable Diffusion Turbo
 
-* `uv run sd-turbo.py`
-* `uv run sd-turbo.py --help`
+* `uv run --locked sd-turbo.py`
+* `uv run --locked sd-turbo.py --help`
 
 A fast model, which produces something at a single step. Not terrible, not great.
 
 ### Stable Diffusion 2.1
 
-* `uv run sd-21.py`
-* `uv run sd-21.py --help`
+* `uv run --locked sd-21.py`
+* `uv run --locked sd-21.py --help`
 
 The memory use is not horrible and it's not too slow. The output is not too bad, but not great either.
