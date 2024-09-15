@@ -56,3 +56,10 @@ A fast model, which produces something at a single step. Not terrible, not great
 * `uv run --locked sd-21.py --help`
 
 The memory use is not horrible and it's not too slow. The output is not too bad, but not great either.
+
+### Stable Diffusion 3.0 16bit
+
+* `uv run --locked sd-30.py`
+* `uv run --locked sd-30.py --help`
+
+Medium quality and speed.
