@@ -21,4 +21,4 @@ jobs:
           cache-dependency-glob: "uv.lock"
 
       - name: ruff check
-        run: uv run --locked ruff check
+        run: uv run --locked --only-dev ruff check

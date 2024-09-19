@@ -21,4 +21,4 @@ jobs:
           cache-dependency-glob: "uv.lock"
 
       - name: ruff format check
-        run: uv run --locked ruff format --check
+        run: uv run --locked --only-dev ruff format --check

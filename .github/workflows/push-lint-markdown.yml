@@ -21,4 +21,4 @@ jobs:
           cache-dependency-glob: "uv.lock"
 
       - name: markdownlint
-        run: uv run --locked pymarkdown scan .
+        run: uv run --locked --only-dev pymarkdown scan .
