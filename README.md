@@ -105,3 +105,10 @@ Very mixed results. Not too slow. Not too memory hungry.
 * `uv run --locked latte-1.py --help`
 
 Very bad results. Not too slow. Somewhat memory hungry. I'm probably using it wrong.
+
+### CogVideoX
+
+* `uv run --locked cogvideox.py`
+* `uv run --locked cogvideox.py --help`
+
+Surprisingly good results. Surprisingly fast. Surprisingly not too memory hungry.
