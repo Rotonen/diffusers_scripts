@@ -6,7 +6,6 @@ time (
     do
         echo ""
         echo "${script}"
-        echo ""
         time uv run --locked "${script}" --no-open-outputs &> /dev/null
     done
 )
