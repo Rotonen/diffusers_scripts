@@ -1,9 +1,11 @@
-name: Lint Markdown
+name: Lint Python
 
-on: push
+on:
+  pull_request:
+  merge_group:
 
 jobs:
-  markdown-lint:
+  ruff-lint:
     runs-on: ubuntu-22.04
     steps:
       - name: Git Checkout
@@ -20,5 +22,5 @@ jobs:
           enable-cache: true
           cache-dependency-glob: "uv.lock"
 
-      - name: markdownlint
-        run: uv run --locked --only-dev pymarkdown scan .
+      - name: ruff check
+        run: uv run --locked --only-dev ruff check

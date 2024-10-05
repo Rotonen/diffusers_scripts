@@ -1,9 +1,11 @@
-name: Lint Python
+name: Check Python Formatting
 
-on: push
+on:
+  pull_request:
+  merge_group:
 
 jobs:
-  ruff-lint:
+  ruff-format-check:
     runs-on: ubuntu-22.04
     steps:
       - name: Git Checkout
@@ -20,5 +22,5 @@ jobs:
           enable-cache: true
           cache-dependency-glob: "uv.lock"
 
-      - name: ruff check
-        run: uv run --locked --only-dev ruff check
+      - name: ruff format check
+        run: uv run --locked --only-dev ruff format --check
