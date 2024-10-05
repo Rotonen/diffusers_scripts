@@ -30,14 +30,99 @@ The line length is inherited by all other configs.
 
 * ruff
 * pymarkdown
+* shellcheck
 
 Refer to `pyproject.toml` for details on which linters are enabled and how they are set up.
+
+### Smoketest
+
+The nature of these scripts does not allow for properly checking for correctness of operation and/or output. For this
+purpose a manual smoketest script is provided for assessing if any manual version bumps broke anything.
+
+```console
+$ ./smoketest.sh
+
+cogvideox.py
+
+
+real 4m3.882s
+user 2m4.826s
+sys 1m43.195s
+
+flux-dev-16.py
+
+
+real 6m19.258s
+user 4m49.680s
+sys 1m18.687s
+
+flux-dev-8.py
+
+
+real 5m32.990s
+user 9m19.441s
+sys 4m32.792s
+
+flux-schnell-16.py
+
+
+real 0m48.955s
+user 0m25.809s
+sys 0m14.294s
+
+flux-schnell-8.py
+
+
+real 2m9.099s
+user 7m9.572s
+sys 2m21.556s
+
+latte-1.py
+
+
+real 0m58.887s
+user 1m0.014s
+sys 0m30.556s
+
+sa-10.py
+
+
+real 0m58.454s
+user 1m5.611s
+sys 0m3.884s
+
+sd-21.py
+
+
+real 0m53.635s
+user 0m50.140s
+sys 0m15.909s
+
+sd-30.py
+
+
+real 0m49.789s
+user 1m0.705s
+sys 0m25.067s
+
+sd-turbo.py
+
+
+real 0m13.490s
+user 0m24.089s
+sys 0m14.355s
+
+real 22m48.441s
+user 28m9.887s
+sys 11m40.295s
+```
 
 ## CI
 
 * Python formatting: ruff
 * Python linting: ruff
 * MarkDown linting: pymarkdownlnt
+* Reviewdog Shellcheck
 
 ## Scripts Provided
 
