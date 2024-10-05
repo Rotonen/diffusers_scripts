@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from argparse import ArgumentParser
+from argparse import ArgumentParser, BooleanOptionalAction
 from pathlib import Path
 from subprocess import call
 from time import time
@@ -11,7 +11,14 @@ from soundfile import write as write_soundfile
 from torch import bfloat16
 
 
-def main(model, prompt, length, inference_steps, samples_per_batch):
+def main(arguments):
+    model = arguments.model
+    prompt = arguments.prompt
+    length = arguments.length
+    inference_steps = arguments.inference_steps
+    samples_per_batch = arguments.samples_per_batch
+    open_outputs = arguments.open_outputs
+
     prompt = [prompt] * samples_per_batch
 
     negative_attributes = (
@@ -61,7 +68,8 @@ def main(model, prompt, length, inference_steps, samples_per_batch):
         path_to_unlink = Path(filename)
         path_to_unlink.unlink()
 
-    call(("open", "outputs"))
+    if open_outputs:
+        call(("open", "outputs"))
 
 
 if __name__ == "__main__":
@@ -72,7 +80,8 @@ if __name__ == "__main__":
     parser.add_argument("--length", default=30, type=int, required=False)
     parser.add_argument("--inference-steps", default=256, type=int, required=False)
     parser.add_argument("--samples-per-batch", default=1, type=int, required=False)
+    parser.add_argument("--open-outputs", default=True, action=BooleanOptionalAction, required=False)
 
     arguments = parser.parse_args()
 
-    main(arguments.model, arguments.prompt, arguments.length, arguments.inference_steps, arguments.samples_per_batch)
+    main(arguments)

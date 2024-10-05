@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from argparse import ArgumentParser
+from argparse import ArgumentParser, BooleanOptionalAction
 from subprocess import call
 from time import time
 
@@ -9,8 +9,14 @@ from slugify import slugify
 from torch import bfloat16
 
 
-def main(model, prompt, resolution, inference_steps, videos_per_batch):
-    width, height = resolution
+def main(arguments):
+    model = arguments.model
+    prompt = arguments.prompt
+    width = arguments.width
+    height = arguments.height
+    inference_steps = arguments.inference_steps
+    videos_per_batch = arguments.videos_per_batch
+    open_outputs = arguments.open_outputs
 
     prompt = [prompt] * videos_per_batch
 
@@ -35,7 +41,8 @@ def main(model, prompt, resolution, inference_steps, videos_per_batch):
         except OSError:
             export_to_gif(video, f"outputs/{time()}-{slugified_model_name}-{width}-{height}.gif")
 
-    call(("open", "outputs"))
+    if open_outputs:
+        call(("open", "outputs"))
 
 
 if __name__ == "__main__":
@@ -47,8 +54,8 @@ if __name__ == "__main__":
     parser.add_argument("--height", default=256, type=int, required=False)
     parser.add_argument("--inference-steps", default=64, type=int, required=False)
     parser.add_argument("--videos-per-batch", default=1, type=int, required=False)
+    parser.add_argument("--open-outputs", default=True, action=BooleanOptionalAction, required=False)
 
     arguments = parser.parse_args()
-    resolution = arguments.width, arguments.height
 
-    main(arguments.model, arguments.prompt, resolution, arguments.inference_steps, arguments.videos_per_batch)
+    main(arguments)
