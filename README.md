@@ -168,13 +168,6 @@ Good quality and somewhat less slow. Somewhat less memory hungry.
 
 Very mixed results. Not too slow. Not too memory hungry.
 
-### Latte-1
-
-* `uv run --locked latte-1.py`
-* `uv run --locked latte-1.py --help`
-
-Very bad results. Not too slow. Somewhat memory hungry. I'm probably using it wrong.
-
 ### CogVideoX
 
 * `uv run --locked cogvideox.py`
