@@ -44,61 +44,49 @@ $ ./smoketest.sh
 
 cogvideox.py
 
-real 3m30.494s
-user 1m49.866s
-sys 1m31.353s
+real 3m18.286s
+user 1m56.287s
+sys 1m26.422s
 
 flux-dev-16.py
 
-real 6m9.287s
-user 4m33.234s
-sys 1m20.181s
-
-flux-dev-8.py
-
-real 4m53.429s
-user 8m9.986s
-sys 3m33.157s
+real 6m17.942s
+user 4m41.198s
+sys 1m20.163s
 
 flux-schnell-16.py
 
-real 0m55.208s
-user 0m23.858s
-sys 0m14.999s
-
-flux-schnell-8.py
-
-real 2m17.038s
-user 6m45.482s
-sys 2m9.343s
+real 0m58.238s
+user 0m25.540s
+sys 0m16.493s
 
 sa-10.py
 
-real 0m47.443s
-user 0m53.694s
-sys 0m5.526s
+real 1m5.586s
+user 1m10.350s
+sys 0m6.380s
 
 sd-21.py
 
-real 0m50.465s
-user 0m46.988s
-sys 0m15.534s
+real 1m6.184s
+user 0m59.773s
+sys 0m16.558s
 
 sd-30.py
 
-real 0m46.716s
-user 0m58.262s
-sys 0m24.008s
+real 1m28.248s
+user 1m31.322s
+sys 0m26.024s
 
 sd-turbo.py
 
-real 0m13.690s
-user 0m23.808s
-sys 0m12.784s
+real 0m48.682s
+user 1m3.868s
+sys 0m17.807s
 
-real 20m23.770s
-user 24m45.179s
-sys 9m46.885s
+real 15m3.165s
+user 11m48.338s
+sys 4m9.847s
 ```
 
 ## CI
@@ -140,26 +128,12 @@ Medium quality and speed.
 
 Good quality and very fast. Somewhat memory hungry.
 
-### Flux.1 Schnell 8bit
-
-* `uv run --locked flux-schnell-8.py`
-* `uv run --locked flux-schnell-8.py --help`
-
-Good quality and very fast. Somewhat less memory hungry.
-
 ### Flux.1 Dev 16bit
 
 * `uv run --locked flux-dev-16.py`
 * `uv run --locked flux-dev-16.py --help`
 
 Good quality and somewhat slow. Memory hungry.
-
-### Flux.1 Dev 8bit
-
-* `uv run --locked flux-dev-8.py`
-* `uv run --locked flux-dev-8.py --help`
-
-Good quality and somewhat less slow. Somewhat less memory hungry.
 
 ### Stable Audio 1.0
 
