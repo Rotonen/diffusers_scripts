@@ -78,7 +78,7 @@ real 1m28.248s
 user 1m31.322s
 sys 0m26.024s
 
-sd-turbo.py
+sdxl-turbo.py
 
 real 0m48.682s
 user 1m3.868s
@@ -100,10 +100,10 @@ sys 4m9.847s
 
 Every script provided has default values for every parameter, so you can try them out without having to dive in deeper.
 
-### Stable Diffusion Turbo 16bit
+### Stable Diffusion XL Turbo 16bit
 
-* `uv run --locked sd-turbo.py`
-* `uv run --locked sd-turbo.py --help`
+* `uv run --locked sdxl-turbo.py`
+* `uv run --locked sdxl-turbo.py --help`
 
 A fast model, which produces something at a single step. Not terrible, not great.
 
