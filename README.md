@@ -44,49 +44,61 @@ $ ./smoketest.sh
 
 cogvideox.py
 
-real 3m18.286s
-user 1m56.287s
-sys 1m26.422s
+real 3m28.897s
+user 1m51.189s
+sys 1m33.229s
 
 flux-dev-16.py
 
-real 6m17.942s
-user 4m41.198s
-sys 1m20.163s
+real 5m53.187s
+user 4m44.218s
+sys 0m56.602s
 
 flux-schnell-16.py
 
-real 0m58.238s
-user 0m25.540s
-sys 0m16.493s
+real 0m53.866s
+user 0m25.260s
+sys 0m14.718s
 
 sa-10.py
 
-real 1m5.586s
-user 1m10.350s
-sys 0m6.380s
+real 0m56.052s
+user 1m5.661s
+sys 0m5.822s
 
 sd-21.py
 
-real 1m6.184s
-user 0m59.773s
-sys 0m16.558s
+real 0m55.068s
+user 0m52.917s
+sys 0m15.861s
 
 sd-30.py
 
-real 1m28.248s
-user 1m31.322s
-sys 0m26.024s
+real 0m59.950s
+user 1m11.507s
+sys 0m26.018s
+
+sd-35.py
+
+real 2m36.829s
+user 2m13.813s
+sys 0m32.909s
+
+sd-35-turbo.py
+
+real 0m36.307s
+user 0m35.386s
+sys 0m19.100s
 
 sdxl-turbo.py
 
-real 0m48.682s
-user 1m3.868s
-sys 0m17.807s
+real 0m13.382s
+user 0m24.129s
+sys 0m13.887s
 
-real 15m3.165s
-user 11m48.338s
-sys 4m9.847s
+real 16m33.539s
+user 13m24.080s
+sys 4m38.145s
 ```
 
 ## CI
@@ -148,3 +160,17 @@ Very mixed results. Not too slow. Not too memory hungry.
 * `uv run --locked cogvideox.py --help`
 
 Surprisingly good results. Surprisingly fast. Surprisingly not too memory hungry.
+
+### Stable Diffusion 3.5 16bit
+
+* `uv run --locked sd-35.py`
+* `uv run --locked sd-35.py --help`
+
+Sorta fast and excellent results.
+
+### Stable Diffusion 3.5 Turbo 16bit
+
+* `uv run --locked sd-35-turbo.py`
+* `uv run --locked sd-35-turbo.py --help`
+
+Hella fast for the quality and very good results.
