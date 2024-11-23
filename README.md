@@ -44,61 +44,67 @@ $ ./smoketest.sh
 
 cogvideox.py
 
-real 3m28.897s
-user 1m51.189s
-sys 1m33.229s
+real 10m33.656s
+user 1m54.323s
+sys 1m37.042s
+
+cogview3.py
+
+real 2m50.749s
+user 2m44.942s
+sys 0m22.819s
 
 flux-dev-16.py
 
-real 5m53.187s
-user 4m44.218s
-sys 0m56.602s
+real 5m56.333s
+user 4m39.890s
+sys 1m3.114s
 
 flux-schnell-16.py
 
-real 0m53.866s
-user 0m25.260s
-sys 0m14.718s
+real 0m53.507s
+user 0m24.947s
+sys 0m15.274s
 
 sa-10.py
 
-real 0m56.052s
-user 1m5.661s
-sys 0m5.822s
+real 0m53.894s
+user 1m0.818s
+sys 0m5.792s
 
 sd-21.py
 
-real 0m55.068s
-user 0m52.917s
-sys 0m15.861s
+real 0m52.081s
+user 0m48.094s
+sys 0m16.067s
 
 sd-30.py
 
-real 0m59.950s
-user 1m11.507s
-sys 0m26.018s
+real 0m52.228s
+user 1m2.891s
+sys 0m24.934s
 
 sd-35.py
 
-real 2m36.829s
-user 2m13.813s
-sys 0m32.909s
+real 2m26.211s
+user 2m5.938s
+sys 0m35.565s
 
 sd-35-turbo.py
 
-real 0m36.307s
-user 0m35.386s
-sys 0m19.100s
+real 0m37.089s
+user 0m34.860s
+sys 0m20.907s
 
 sdxl-turbo.py
 
-real 0m13.382s
-user 0m24.129s
-sys 0m13.887s
+real 0m16.304s
+user 0m30.315s
+sys 0m13.901s
 
-real 16m33.539s
-user 13m24.080s
-sys 4m38.145s
+real 26m12.051s
+user 15m47.018s
+sys 5m15.414s
 ```
 
 ## CI
@@ -174,3 +180,10 @@ Sorta fast and excellent results.
 * `uv run --locked sd-35-turbo.py --help`
 
 Hella fast for the quality and very good results.
+
+### Cogview3-plus 16bit
+
+* `uv run --locked sd-35-turbo.py`
+* `uv run --locked sd-35-turbo.py --help`
+
+Not slow. Very saturated and poppy results. I sorta like it, it's different.
