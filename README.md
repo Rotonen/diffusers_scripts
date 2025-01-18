@@ -44,67 +44,67 @@ $ ./smoketest.sh
 
 cogvideox.py
 
-real 10m33.656s
-user 1m54.323s
-sys 1m37.042s
+real 3m16.692s
+user 1m46.756s
+sys 1m22.098s
 
 cogview3.py
 
-real 2m50.749s
-user 2m44.942s
-sys 0m22.819s
+real 2m47.431s
+user 2m36.940s
+sys 0m21.348s
 
 flux-dev-16.py
 
-real 5m56.333s
-user 4m39.890s
-sys 1m3.114s
+real 6m10.513s
+user 4m47.417s
+sys 1m8.031s
 
 flux-schnell-16.py
 
-real 0m53.507s
-user 0m24.947s
-sys 0m15.274s
+real 0m56.253s
+user 0m26.351s
+sys 0m13.899s
 
 sa-10.py
 
-real 0m53.894s
-user 1m0.818s
-sys 0m5.792s
+real 1m6.092s
+user 1m10.474s
+sys 0m5.748s
 
 sd-21.py
 
-real 0m52.081s
-user 0m48.094s
-sys 0m16.067s
+real 1m7.606s
+user 1m1.965s
+sys 0m15.734s
 
 sd-30.py
 
-real 0m52.228s
-user 1m2.891s
-sys 0m24.934s
+real 1m27.871s
+user 1m31.381s
+sys 0m26.309s
 
 sd-35.py
 
-real 2m26.211s
-user 2m5.938s
-sys 0m35.565s
+real 3m24.998s
+user 2m26.810s
+sys 0m32.012s
 
 sd-35-turbo.py
 
-real 0m37.089s
-user 0m34.860s
-sys 0m20.907s
+real 1m37.374s
+user 0m51.319s
+sys 0m20.205s
 
 sdxl-turbo.py
 
-real 0m16.304s
-user 0m30.315s
-sys 0m13.901s
+real 0m50.113s
+user 1m3.175s
+sys 0m14.755s
 
-real 26m12.051s
-user 15m47.018s
-sys 5m15.414s
+real 22m44.944s
+user 17m42.589s
+sys 5m0.139s
 ```
 
 ## CI
